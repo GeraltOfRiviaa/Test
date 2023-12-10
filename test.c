@@ -1,4 +1,5 @@
-#include <stdint.h>
+//This is made by Copilot, not me :)
+#include <stdio.h>
 
 int main() {
     int num;
@@ -11,9 +12,16 @@ int main() {
         num += 5;
         printf("The result is: %d\n", num);
 
-        printf("Do you want to continue? (y/n): ");
-        scanf(" %c", &choice);
-    } while(choice == 'y' || choice == 'Y');
+        do {
+            printf("Do you want to continue? (y/n): ");
+            scanf(" %c", &choice);
+
+            if (choice != 'y' && choice != 'n') {
+                printf("Try again.\n");
+            }
+        } while (choice != 'y' && choice != 'n');
+
+    } while (choice == 'y' || choice == 'Y');
 
     return 0;
 }
